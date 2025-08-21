@@ -17,15 +17,7 @@ def index():
 async def toggle_all_lights():
     try:
         bulb_addresses = [
-            "192.168.1.42",
-            "192.168.1.153",
-            "192.168.1.152",
-            "192.168.1.113",
-            "192.168.1.6",
-            "192.168.1.218",
-            "192.168.1.215",
-            "192.168.1.184",
-            "192.168.1.165"
+            "x.x.x.x",...
         ]
         status = request.form['status']
         await asyncio.gather(*[toggle_light(status, addr) for addr in bulb_addresses])
@@ -81,16 +73,7 @@ async def get_device_status(device_model, device_address):
 async def wake_up_devices():
     try:
         device_addresses = [
-            "192.168.1.42",
-            "192.168.1.153",
-            "192.168.1.152",
-            "192.168.1.113",
-            "192.168.1.6",
-            "192.168.1.218",
-            "192.168.1.215",
-            "192.168.1.184",
-            "192.168.1.165",
-            "192.168.1.86"
+            "x.x.x.x",...
         ]
         tasks = [wake_up_device(device) for device in device_addresses]
         await asyncio.gather(*tasks)
@@ -128,16 +111,7 @@ async def wake_up_device(device):
 async def wake_up_devices():
     try:
         device_addresses = [
-            "192.168.1.42",
-            "192.168.1.153",
-            "192.168.1.152",
-            "192.168.1.113",
-            "192.168.1.6",
-            "192.168.1.218",
-            "192.168.1.215",
-            "192.168.1.184",
-            "192.168.1.165",
-            "192.168.1.86"
+            "x.x.x.x",...
         ]
         tasks = [wake_up_device(device) for device in device_addresses]
         await asyncio.gather(*tasks)
@@ -247,4 +221,4 @@ async def discover_devices():
         return None
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='x.x.x.x', port=5000, debug=True)
